@@ -1,0 +1,31 @@
+%scroll {
+
+  scrollbar-width: thin;
+  scrollbar-color: #454247 #272329;
+
+  // /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+    &::-webkit-scrollbar-track {
+      border: var(--metalSaurus) 2px solid;
+      background-color: var(--metalSaurus);
+      // border-radius: 24px;
+    }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    // border-radius: 50px;
+  }
+
+  //   /* Handle on hover */
+  //   &::-webkit-scrollbar-thumb:hover { 
+  //     background: $brand-color;
+  //   }
+
+}
+

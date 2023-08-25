@@ -1,0 +1,15 @@
+.link-more {
+  font-size: calcRem(16);
+  color: var(--black);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: flex-end;
+  font-family: $font-b;
+  i {
+    font-size: 12px;
+    margin-inline-start: 5px;
+  }
+  &:hover {
+    color: var(--seaBlue);
+  }
+}

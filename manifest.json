@@ -1,0 +1,10 @@
+// 20230805120848
+// https://www.elwatannews.com/manifest.json
+
+{
+  "gcm_sender_id": "182673411957",
+  "gcm_sender_id_comment": "Do not change the GCM Sender ID",
+  "gcm_user_visible_only": true,
+  "display": "standalone",
+  "name": "الوطن"
+}

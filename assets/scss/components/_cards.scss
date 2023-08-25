@@ -1,0 +1,116 @@
+.overlay-details-card {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .card-content {
+    padding: 15px;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8435749299719888) 0%,
+      rgba(0, 0, 0, 0.44021358543417366) 34%,
+      rgba(0, 0, 0, 0) 69%
+    );
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &-title {
+      font-family: $font-b;
+      font-size: calcRem(20);
+      line-height: calcRem(30);
+      color: var(--white);
+    }
+    &-text {
+      color: var(--white);
+      font-size: calcRem(14);
+    }
+  }
+}
+
+// mini-news-card
+.mini-news-card {
+  img {
+    object-fit: cover;
+  }
+
+  a {
+    display: block;
+
+    @include mq("lg") {
+      font-size: 18px;
+    }
+
+    @include mq("xxl") {
+      font-size: 20px;
+    }
+  }
+
+  .card-image {
+    position: relative;
+  }
+  .card-category {
+    color: var(--metalSaurus);
+    font-family: $font-b;
+    font-size: calcRem(14);
+  }
+  .card-text {
+    transition: 0.3s ease;
+    line-height: calcRem(24);
+    font-size: calcRem(16);
+    color: var(--raisinBlack);
+    margin-top: 5px;
+    font-family: $font-b;
+    @include ellipse-rows(4);
+
+    &.two-lines {
+      @include ellipse-rows(2);
+    }
+  }
+
+  .article-image {
+    position: relative;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &.video {
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/video-icon.svg) no-repeat center center
+          rgba(0, 0, 0, 0.2);
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+}
+
+// large-news-card
+
+.large-news-card {
+  &-title {
+    font-size: calcRem(22);
+    font-family: $font-b;
+    line-height: calcRem(33);
+    color: var(--raisinBlack);
+    margin-bottom: calcRem(22);
+  }
+  &-text {
+    font-size: calcRem(14);
+    color: var(--richBlack);
+  }
+}

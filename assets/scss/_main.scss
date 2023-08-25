@@ -1,0 +1,35 @@
+// Google Fonts
+
+// @ Helper
+@import './helper/directions';
+
+
+
+// @ abstract
+@import './abstract/functions';
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './abstract/placeholder';
+// @ Vendors
+// Global Imports plugins
+@import "./vendor/all";
+
+
+// @ Base
+@import './base/reset';
+@import './base/fonts';
+@import './base/base';
+@import './base/typography.scss';
+
+
+// @ Components
+@import "./components/all";
+
+// @ Layout
+
+@import './layout/all';
+
+
+
+// Home 
+@import 'pages/allPages';

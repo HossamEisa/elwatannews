@@ -1,0 +1,53 @@
+.section-title {
+  font-size: calcRem(22);
+  font-family: $font-b;
+  border-top: 1px solid var(--outerSpace);
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding-top: 5px;
+  color: var(--black);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 5px;
+    top: -5px;
+  }
+  &.steelTeal {
+    &::before {
+      background-color: var(--steelTeal);
+    }
+  }
+  &.flirt {
+    &::before {
+      background-color: var(--flirt);
+    }
+  }
+  &.seaBlue {
+    &::before {
+      background-color: var(--seaBlue);
+    }
+  }
+  &.metalSaurus {
+    &::before {
+      background-color: var(--metalSaurus);
+    }
+  }
+  &.persianGreen {
+    &::before {
+      background-color: var(--persianGreen);
+    }
+  }
+
+  &.chineseGold {
+    &::before {
+      background-color: var(--chineseGold);
+    }
+  }
+}
+
+.text-bg-primary {
+  background-color: var(--main-color) !important;
+}

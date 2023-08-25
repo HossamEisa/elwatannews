@@ -1,0 +1,35 @@
+.gutters-container {
+  display: none;
+  overflow: hidden;
+
+  @include mq("xl") {
+    display: block;
+  }
+
+  .gutter-bar {
+    width: 160px;
+    height: 600px;
+    position: absolute;
+    top: 100%;
+
+    &.start-side {
+      #{$right}: -160px;
+    }
+
+    &.end-side {
+      #{$left}: -160px;
+    }
+  }
+}
+
+.middle-adsense {
+  .adsense-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-height: 250px;
+  }
+}

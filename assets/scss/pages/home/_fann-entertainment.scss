@@ -1,0 +1,28 @@
+.fann-entertainment {
+  overflow: hidden;
+  .alwatan-images-carousel {
+    position: relative;
+    div[class^="swiper-button"] {
+      background-color: var(--white);
+      border-color: #cccccc;
+      color: var(--black);
+      &::after {
+        display: none;
+      }
+      &.swiper-button-next {
+        #{$left}: 0;
+        #{$right}: auto;
+        @include mq("lg") {
+          #{$left}: -17px;
+        }
+      }
+      &.swiper-button-prev {
+        #{$right}: 0;
+        #{$left}: auto;
+        @include mq("lg") {
+          #{$right}: -17px;
+        }
+      }
+    }
+  }
+}

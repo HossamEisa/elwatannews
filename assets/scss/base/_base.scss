@@ -1,0 +1,89 @@
+:root {
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // Main
+  --main-color: #f37021;
+  --vividVermilion: #e36419;
+  --main-color-55: rgba(243, 114, 33, 0.55);
+
+  // Black
+  --richBlack: #0b0b12;
+  // Main Vars in Design
+  --raisinBlack: #252527;
+  --darkCharcoal: #2c2c32;
+  // Gray
+  --cultured: #f7f7f7;
+  --brightGray: #e7e8ea;
+  --lightSilver: #d4d5d8;
+  --metalSaurus: #6e7b83;
+  --metalSaurus-30: rgba(110, 123, 131, 0.3);
+  --metalSaurus-85: rgba(110, 123, 131, 0.85);
+  --outerSpace: #464749;
+
+  // variety colors
+  --eggShell: #efecdc;
+  --paleGoldenrod: #dce8a7;
+  --chineseGold: #cc9900;
+  --persianGreen: #00a988;
+  --seaBlue: #00679c;
+  --flirt: #990066;
+
+  // Another Vars
+  --silverSand: #c2c3c5;
+  --jet: #343434;
+  --graniteGray: #656668;
+  --white: #fff;
+  --black: #000;
+  --steelTeal: #607d86;
+  --oldLace: #fdf3ea;
+}
+
+body {
+  font-family: $font-l, var(--bs-body-font-family);
+  color: var(--text-color);
+  direction: $direction;
+  text-align: $right;
+  background-color: var(--white);
+  line-height: 1.2;
+  @extend %scroll;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: var(--main-color);
+}
+
+::selection {
+  color: #fff;
+  background: var(--main-color);
+}
+
+.mt-n1 {
+  margin-top: -0.25rem;
+}
+.mt-n2 {
+  margin-top: -5rem;
+}
+.mt-n3 {
+  margin-top: -1rem;
+}
+.mt-n4 {
+  margin-top: -1.5rem;
+}
+.mt-n5 {
+  margin-top: -3rem;
+}
+
+.to-be-rotated-dir {
+  @at-root {
+    [dir="ltr"] & {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+hr {
+  border-color: var(--brightGray);
+  opacity: 1;
+}

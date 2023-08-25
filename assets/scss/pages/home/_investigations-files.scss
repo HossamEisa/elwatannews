@@ -1,0 +1,23 @@
+.investigations-files {
+  padding-top: calcRem(40);
+
+  img {
+    object-fit: cover;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $font-b;
+    line-height: calcRem(24);
+    color: var(--raisinBlack);
+    &.heading-link {
+      font-size: calcRem(22);
+      color: var(--black);
+      line-height: calcRem(30);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

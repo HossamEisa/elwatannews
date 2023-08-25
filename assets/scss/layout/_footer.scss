@@ -1,0 +1,118 @@
+.footer {
+  background-color: var(--darkCharcoal);
+
+  // Main Links
+  &_main {
+    padding: calcRem(18) 0 calcRem(30);
+    &_logo {
+      padding-top: calcRem(25);
+      text-align: center;
+    }
+
+    &_links {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--graniteGray);
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      @include mq("lg") {
+        justify-content: start;
+      }
+      li {
+        padding: 0 15px;
+        width: 50%;
+        @include mq("lg") {
+          padding: 0;
+          width: auto;
+          margin-inline-end: 30px;
+          &:last-child {
+            margin-inline-end: 0;
+          }
+        }
+        a {
+          position: relative;
+          transition: 0.3s ease;
+          padding-bottom: 15px;
+          display: flex;
+          color: var(--white);
+          text-align: center;
+          align-items: center;
+          text-decoration: none;
+          font-family: $font-b;
+          font-size: calcRem(16);
+          justify-content: center;
+          @include mq("lg") {
+            justify-content: flex-start;
+          }
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+      &.bullets {
+        a {
+          &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-inline-end: 10px;
+            display: inline-block;
+            background-color: var(--graniteGray);
+          }
+        }
+      }
+    }
+
+    &_social {
+      display: flex;
+      justify-content: center;
+      padding-top: calcRem(15);
+      li {
+        margin-inline-end: 10px;
+        &:last-child {
+          margin-inline-end: 0;
+        }
+      }
+      a {
+        width: calcRem(40);
+        height: calcRem(40);
+        border-radius: 6px;
+        background-color: var(--outerSpace);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--silverSand);
+        text-decoration: none;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          border-radius: 50%;
+          color: var(--white);
+          background-color: var(--metalSaurus-85);
+        }
+      }
+    }
+  }
+  // Copyright
+  &_copyright {
+    background-color: var(--richBlack);
+    color: var(--silverSand);
+    font-size: calcRem(14);
+    padding: 8px 0;
+    line-height: 19px;
+    .dev-comp {
+      @include mq("lg") {
+        position: relative;
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          margin-inline-end: 10px;
+          display: inline-block;
+          background-color: var(--silverSand);
+        }
+      }
+    }
+  }
+}

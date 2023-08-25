@@ -1,0 +1,52 @@
+.opnion-book-box {
+  background-color: var(--eggShell);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-size: calcRem(16);
+  font-family: $font-b;
+  color: var(--richBlack);
+  height: 100%;
+  @include mq("xl") {
+    min-height: 330px;
+    font-size: calcRem(18);
+  }
+  &-quote {
+    position: relative;
+    &::before {
+      content: "";
+      background: url(../../../assets/img/watan-opnion/quotes.svg) center
+        no-repeat;
+      display: block;
+      width: 18px;
+      height: 18px;
+      transform: rotate(180deg);
+      margin-bottom: 8px;
+      @at-root body[dir="ltr"] & {
+        transform: scaleX(-1) rotate(180deg);
+      }
+    }
+    &-signature {
+      color: var(--metalSaurus);
+      font-size: calcRem(14);
+      margin-top: 5px;
+      @include mq("xl") {
+        font-size: calcRem(16);
+      }
+    }
+  }
+  &-image {
+    border: 1px solid var(--metalSaurus-30);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-inline-start: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    img {
+      object-fit: contain;
+    }
+  }
+}
