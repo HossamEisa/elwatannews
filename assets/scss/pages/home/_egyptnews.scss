@@ -9,13 +9,14 @@
     @include ellipse-rows(4);
   }
   &--text {
-    font-family: $font-l;
-    font-size: 14px;
-    line-height: 22px;
+    font-family: $font-b;
   }
   .reloadLink {
     color: var(--metalSaurus);
     font-size: calcRem(15);
   }
-}
 
+  .fav-card {
+    border-bottom: 1px solid var(--brightGray);
+  }
+}

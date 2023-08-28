@@ -62,7 +62,6 @@
     color: var(--metalSaurus);
     font-family: $font-b;
     font-size: calcRem(14);
-    margin-top: 5px;
   }
   .card-text {
     transition: 0.3s ease;
@@ -125,12 +124,11 @@
 }
 
 .fav-card {
-  background-color: var(--eggShell);
-  padding: 10px;
+  padding: 8px 0;
   border-radius: 4px;
   display: flex;
   img {
-    width: 100px;
+    width: 110px;
   }
   .card-category {
     font-family: $font-b;
@@ -147,9 +145,6 @@
 }
 
 .mini-cover-news-card {
-  background-color: var(--paleGoldenrod);
-  padding: 10px;
-  border-radius: 4px;
   display: flex;
   img {
     width: 100px;

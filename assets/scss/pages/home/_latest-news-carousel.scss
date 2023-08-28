@@ -1,0 +1,54 @@
+.latest-news-title {
+  font-size: calcRem(20);
+  font-family: $font-b;
+}
+.latest-news-carousel {
+  &-card {
+    display: flex;
+    border-#{$left}: 1px solid var(--brightGray);
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    &-body {
+      padding-inline-start: 15px;
+      &-title {
+        font-family: $font-b;
+        margin-bottom: 10px;
+      }
+      &-text {
+        font-size: 15px;
+        font-family: $font-l;
+        color: var(--outerSpace);
+      }
+    }
+  }
+
+  div[class^="swiper-button"] {
+    display: none;
+    @include mq("xl") {
+      display: flex;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 90px;
+      background-color: rgb(255 255 255 / 62%);
+      z-index: -1;
+      left: 0;
+      filter: blur(6px);
+    }
+    top: 18%;
+    &.swiper-button-next {
+      #{$left}: 0;
+      #{$right}: auto;
+    }
+    &.swiper-button-prev {
+      #{$right}: 0;
+      #{$left}: auto;
+    }
+  }
+}

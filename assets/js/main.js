@@ -4,22 +4,22 @@
 const scrollBtnX = document.querySelector(".back-to-top");
 
 const btnVisibility = () => {
-    if (window.scrollY > 400) {
-        scrollBtnX.style.visibility = "visible";
-    } else {
-        scrollBtnX.style.visibility = "hidden";
-    }
+  if (window.scrollY > 400) {
+    scrollBtnX.style.visibility = "visible";
+  } else {
+    scrollBtnX.style.visibility = "hidden";
+  }
 };
 
 scrollBtnX.addEventListener("click", () => {
   window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    top: 0,
+    behavior: "smooth",
   });
 });
 
 document.addEventListener("scroll", () => {
-    btnVisibility();
+  btnVisibility();
 });
 // hero-carousel
 var mainCarousel = new Swiper(".main-news-carousel", {
@@ -71,5 +71,33 @@ var alwatanImagesCarousel = new Swiper(".alwatan-images-carousel .swiper", {
   },
 });
 
+var latestNewsCarousel = new Swiper(".latest-news-carousel", {
+  speed: 1400,
+  spaceBetween: 20,
+  slidesPerView: 1,
 
+  // autoplay: {
+  //   delay: 5000,
+  // },
+  // autoHeight: true,
 
+  // loop: true,
+  navigation: {
+    nextEl: ".latest-news-carousel .swiper-button-next",
+    prevEl: ".latest-news-carousel .swiper-button-prev",
+  },
+  pagination: {
+    el: ".latest-news-carousel .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 3.15,
+      pagination: false,
+    },
+  },
+});

@@ -45,7 +45,7 @@ body {
   direction: $direction;
   text-align: $right;
   background-color: var(--white);
-  line-height: 1.2;
+  line-height: calcRem(20);
   @extend %scroll;
 }
 ::-moz-selection {

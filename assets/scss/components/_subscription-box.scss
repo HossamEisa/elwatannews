@@ -1,0 +1,9 @@
+.subscription-box {
+  border-top: 1px solid var(--black);
+  text-align: center;
+  &-title {
+    font-family: $font-b;
+    font-size: calcRem(20);
+    line-height: calcRem(24);
+  }
+}
