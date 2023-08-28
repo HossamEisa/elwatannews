@@ -40,8 +40,9 @@
 
 .content-col {
   position: relative;
-
+  
   @include mq("lg") {
+    width: calc(100% - 300px);
     padding-inline-end: calcRem(42);
     &::after {
       content: "";

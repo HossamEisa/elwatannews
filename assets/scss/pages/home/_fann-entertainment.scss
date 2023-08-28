@@ -2,13 +2,8 @@
   overflow: hidden;
   .alwatan-images-carousel {
     position: relative;
+
     div[class^="swiper-button"] {
-      background-color: var(--white);
-      border-color: #cccccc;
-      color: var(--black);
-      &::after {
-        display: none;
-      }
       &.swiper-button-next {
         #{$left}: 0;
         #{$right}: auto;

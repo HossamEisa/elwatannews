@@ -1,8 +1,11 @@
 .badge {
-    --bs-badge-padding-x: 0.8em;
-    --bs-badge-padding-y: 0.35em;
-    --bs-badge-font-size: 0.8rem;
-    --bs-badge-font-weight: 700;
-    --bs-badge-color: #fff;
-    --bs-badge-border-radius: 0.2rem;
+  --bs-badge-padding-x: 0.8em;
+  --bs-badge-padding-y: 0.5em;
+  --bs-badge-font-size: 0.8rem;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 0.2rem;
+ &.fann {
+    background-color: #990066;
+ }
 }

@@ -1,0 +1,21 @@
+.egyptnews {
+  .heading-link {
+    font-size: calcRem(22);
+    line-height: calcRem(33);
+
+    font-family: $font-b;
+    margin-bottom: 10px;
+    display: block;
+    @include ellipse-rows(4);
+  }
+  &--text {
+    font-family: $font-l;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .reloadLink {
+    color: var(--metalSaurus);
+    font-size: calcRem(15);
+  }
+}
+

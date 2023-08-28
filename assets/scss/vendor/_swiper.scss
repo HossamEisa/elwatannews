@@ -18,19 +18,20 @@
   }
 }
 
+
+
 div[class^="swiper-button"] {
   // background: none;
   font-size: 16px;
-  color: var(--main-color);
-  border: 1px solid #454247;
+  border: 1px solid #cccccc;
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin: 0;
-  &:after {
-    // display: none;
-    font-size: 12px;
-    font-weight: bolder;
+  background-color: var(--white);
+  color: var(--black);
+  &::after {
+    display: none;
   }
   &.swiper-button-disabled {
     display: none;

@@ -45,6 +45,8 @@
       margin-bottom: 15px;
       font-family: $font-l;
       line-height: 24px;
+      $parent: &;
+
       &:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
@@ -79,6 +81,29 @@
           &::before {
             font-size: calcRem(35);
           }
+        }
+      }
+
+      &.down,
+      &.rise {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 27px;
+          #{$right}: -6px;
+        }
+      }
+      &.down {
+        &::before {
+          background: url("../images/down.svg") no-repeat;
+        }
+      }
+      &.rise {
+        &::before {
+          background: url("../images/up.svg") no-repeat;
         }
       }
     }
