@@ -1,0 +1,9 @@
+<svg id="Group_2858" data-name="Group 2858" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Group_365" data-name="Group 365">
+    <path id="Path_54353" data-name="Path 54353" d="M11,0A11,11,0,1,1,0,11,11,11,0,0,1,11,0Z" fill="#d4d5d8"/>
+  </g>
+  <g id="Group_367" data-name="Group 367" transform="translate(6.429 6)" opacity="0.648">
+    <line id="Line_106" data-name="Line 106" x1="10" y2="10" fill="none" stroke="#000" stroke-width="2"/>
+    <line id="Line_107" data-name="Line 107" x1="10" y2="10" transform="translate(10) rotate(90)" fill="none" stroke="#0b0b12" stroke-width="2"/>
+  </g>
+</svg>

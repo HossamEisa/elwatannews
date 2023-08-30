@@ -101,3 +101,21 @@ var latestNewsCarousel = new Swiper(".latest-news-carousel", {
     },
   },
 });
+
+
+
+var searchClass = document.querySelector('.search');
+searchClass.addEventListener('click', function(e){
+  e.stopPropagation();
+  document.getElementsByTagName("body")[0].classList.toggle('search-open');
+  searchClass.classList.toggle('open');
+});
+document.getElementById("autoComplete-box").addEventListener('click', function(e){
+  e.stopPropagation();
+})
+
+
+document.getElementsByTagName("body")[0].addEventListener('click', function(e){
+  document.getElementsByTagName("body")[0].classList.remove('search-open');
+  searchClass.classList.remove('open');
+})

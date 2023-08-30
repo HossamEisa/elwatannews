@@ -1,3 +1,40 @@
+.latest-news {
+  position: relative;
+  &-section-floating {
+    border-radius: 4px;
+    padding: 7px 28px;
+    background-color: var(--lightSilver);
+    bottom: 0;
+    #{$right}: 0;
+    font-family: $font-b;
+    position: relative;
+    margin-bottom: 25px;
+    @include mq("xl") {
+      position: absolute;
+      margin-bottom: 0;
+    }
+    &-title {
+      position: relative;
+      display: block;
+      &::after {
+        content: attr(data-counter);
+        position: absolute;
+        #{$left}: -22px;
+        top: -3px;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 0.9em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
 .latest-news-title {
   font-size: calcRem(20);
   font-family: $font-b;
@@ -5,7 +42,9 @@
 .latest-news-carousel {
   &-card {
     display: flex;
-    border-#{$left}: 1px solid var(--brightGray);
+    @include mq("md") {
+      border-#{$left}: 1px solid var(--brightGray);
+    }
     img {
       width: 50px;
       height: 50px;

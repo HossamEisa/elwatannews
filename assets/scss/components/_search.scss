@@ -1,0 +1,100 @@
+.autoComplete_wrapper {
+  width: 100%;
+  padding: 5px 10px;
+  @include mq("lg") {
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    width: 60%;
+    transform: translateX(-50%);
+    direction: $direction;
+    text-align: $right;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    @at-root body.search-open & {
+      left: 50%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  > input {
+    width: 100%;
+    height: calcRem(40);
+    border-color: var(--lightSilver);
+    border-radius: 4px;
+    background-position: $right 1rem top 0.5rem;
+    padding: 0 3.2rem 0 2rem;
+    color: var(--metalSaurus);
+    background-image: url("../../assets/images/search.svg");
+    &:hover {
+      color: var(--metalSaurus);
+      &::placeholder {
+        color: var(--metalSaurus);
+      }
+    }
+    &:focus {
+      color: var(--richBlack);
+      border-color: var(--lightSilver);
+      background-color: var(--brightGray);
+      &::placeholder {
+        color: var(--richBlack);
+      }
+    }
+    &::placeholder {
+      color: var(--metalSaurus);
+    }
+    &::-webkit-search-cancel-button {
+      position: relative;
+      right: 20px;
+      height: 22px;
+      width: 22px;
+      border-radius: 10px;
+      -webkit-appearance: none;
+      background-image: url("../../assets/images/x-close.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @at-root body[dir="ltr"] {
+      padding: 0 2rem 0 3.2rem;
+    }
+  }
+  > ul {
+    margin: 0;
+    direction: $direction;
+    text-align: $right;
+    > li {
+      direction: $direction;
+      text-align: $right;
+      &:hover {
+        background-color: var(--brightGray);
+      }
+      &[aria-selected="true"] {
+        background-color: var(--metalSaurus);
+      }
+    }
+  }
+}
+
+.search {
+  span {
+    color: var(--lightSilver);
+    position: relative;
+    top: -2px;
+  }
+  i {
+    &:last-child {
+      display: none;
+    }
+  }
+  &.open {
+    i {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+}
