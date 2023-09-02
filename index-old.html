@@ -152,24 +152,12 @@
                     <div class="logo-wrapper">
                       <div class="row align-items-center">
                         <div class="col-auto d-lg-none">
-                          <!--  <button
+                          <button
                             class="navbar-toggler m-0"
                             type="button"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasStart"
                             aria-controls="offcanvasStart"
-                          >
-                            <i class="fa-solid fa-bars"></i>
-                          </button>
-                          -->
-                          <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown"
-                            aria-controls="navbarNavDropdown"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
                           >
                             <i class="fa-solid fa-bars"></i>
                           </button>
@@ -236,16 +224,15 @@
 
         <!-- //////////////////////////// -->
         <!-- Sticky Header Main -->
-        <div class="main-header-menu">
+        <div class="main-header-menu d-none d-lg-block">
           <nav class="navbar navbar-expand-lg">
             <div class="container">
               <!-- <a class="navbar-brand" href="#">Search icon</a> -->
-              <div
-                class="collapse navbar-collapse nav-menu"
-                id="navbarNavDropdown"
-              >
+              <div class="collapse navbar-collapse nav-menu">
                 <!-- DeskTop Nav -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 desktop">
+                <ul
+                  class="navbar-nav d-none d-lg-flex me-auto mb-2 mb-lg-0 desktop"
+                >
                   <li class="nav-item">
                     <a class="nav-link" href="/">الرئيسية</a>
                   </li>
@@ -332,17 +319,17 @@
                   </li>
                 </ul>
               </div>
-              <div id="autoComplete-box">
-                <input
-                  class="autoComplete"
-                  type="search"
-                  spellcheck="false"
-                  autocorrect="off"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  placeholder="ابحث"
-                />
-              </div>
+             <div id="autoComplete-box">
+              <input
+              id="autoComplete"
+              type="search"
+              spellcheck="false"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              placeholder="ابحث"
+            />
+             </div>
               <div class="search d-none d-lg-inline-block">
                 <span class="me-3">|</span>
                 <a href="#">
@@ -376,112 +363,94 @@
               </h5>
             </div>
             <div class="offcanvas-body">
-              <div>
-                <input
-                  class="autoComplete"
-                  type="search"
-                  spellcheck="false"
-                  autocorrect="off"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  placeholder="ابحث"
-                />
-                <!-- Start Mobile More Links -->
-                <ul class="menu-mobile">
-                  <li class="nav-item limestone">
-                    <a class="nav-link" href="/section/14">كتاب الرأي</a>
-                  </li>
-                  <li class="nav-item limestone">
-                    <a
-                      class="nav-link"
-                      href="https://www.elwatannews.com/albums"
-                      >ألبومات الصور</a
-                    >
-                  </li>
-                  <li class="nav-item limestone">
-                    <a
-                      class="nav-link"
-                      href="https://www.elwatannews.com/weather"
-                      >الطقس</a
-                    >
-                  </li>
-                  <li class="nav-item limestone">
-                    <a class="nav-link" href="https://www.elwatannews.com/pray"
-                      >مواقيت الصلاة</a
-                    >
-                  </li>
-                  <li class="nav-item limestone">
-                    <a
-                      class="nav-link"
-                      href="https://www.elwatannews.com/horoscopes"
-                      >حظك اليوم</a
-                    >
-                  </li>
-                  <li class="nav-item limestone">
-                    <a
-                      class="nav-link"
-                      href="https://www.elwatannews.com/paper-version"
-                      >النسخة الورقية</a
-                    >
-                  </li>
-                  <li class="nav-item limestone">
-                    <a
-                      class="nav-link"
-                      href="https://www.elwatannews.com/hotfile"
-                      >الملفات التفاعلية</a
-                    >
-                  </li>
-                  <li>
-                    <div class="accordion mobile-accordion" id="mobileMenuAcc">
-                      <div class="accordion-item dark-yellow">
-                        <h2 class="accordion-header">
-                          <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapse-8"
-                            aria-expanded="false"
-                            aria-controls="collapse-8"
-                          >
-                            أخبار العالم
-                          </button>
-                        </h2>
-                        <div
-                          id="collapse-8"
-                          class="accordion-collapse collapse animated fadeIn"
-                          aria-labelledby="heading-8"
-                          data-bs-parent="#mobileMenuAcc"
+              <ul class="menu-mobile">
+                <li class="nav-item limestone">
+                  <a class="nav-link" href="/section/14">كتاب الرأي</a>
+                </li>
+                <li class="nav-item limestone">
+                  <a class="nav-link" href="https://www.elwatannews.com/albums"
+                    >ألبومات الصور</a
+                  >
+                </li>
+                <li class="nav-item limestone">
+                  <a class="nav-link" href="https://www.elwatannews.com/weather"
+                    >الطقس</a
+                  >
+                </li>
+                <li class="nav-item limestone">
+                  <a class="nav-link" href="https://www.elwatannews.com/pray"
+                    >مواقيت الصلاة</a
+                  >
+                </li>
+                <li class="nav-item limestone">
+                  <a
+                    class="nav-link"
+                    href="https://www.elwatannews.com/horoscopes"
+                    >حظك اليوم</a
+                  >
+                </li>
+                <li class="nav-item limestone">
+                  <a
+                    class="nav-link"
+                    href="https://www.elwatannews.com/paper-version"
+                    >النسخة الورقية</a
+                  >
+                </li>
+                <li class="nav-item limestone">
+                  <a class="nav-link" href="https://www.elwatannews.com/hotfile"
+                    >الملفات التفاعلية</a
+                  >
+                </li>
+                <li>
+                  <div class="accordion mobile-accordion" id="mobileMenuAcc">
+                    <div class="accordion-item dark-yellow">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapse-8"
+                          aria-expanded="false"
+                          aria-controls="collapse-8"
                         >
-                          <div class="accordion-body">
-                            <ul class="accordion-menu">
-                              <li>
-                                <a href="/subsection/31">عرب وشرق أوسط</a>
-                              </li>
-                              <li>
-                                <a href="/subsection/40">إفريقيا</a>
-                              </li>
-                              <li>
-                                <a href="/subsection/44">دولي</a>
-                              </li>
-                            </ul>
-                          </div>
+                          أخبار العالم
+                        </button>
+                      </h2>
+                      <div
+                        id="collapse-8"
+                        class="accordion-collapse collapse animated fadeIn"
+                        aria-labelledby="heading-8"
+                        data-bs-parent="#mobileMenuAcc"
+                      >
+                        <div class="accordion-body">
+                          <ul class="accordion-menu">
+                            <li>
+                              <a href="/subsection/31">عرب وشرق أوسط</a>
+                            </li>
+                            <li>
+                              <a href="/subsection/40">إفريقيا</a>
+                            </li>
+                            <li>
+                              <a href="/subsection/44">دولي</a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="offcanvas-close">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              >
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
+          </div>
+          <div class="offcanvas-close">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fas fa-times"></i>
+            </button>
           </div>
         </div>
         <!-- /Mobile Canvas Menu -->
@@ -2987,32 +2956,9 @@
     <!-- Code injected by live-server -->
     <script>
       const autoCompleteJS = new autoComplete({
-        selector: ".autoComplete",
-
         placeHolder: "بحث، مقالات، اخبار، صور…",
         data: {
-          src: [
-            " عربية ",
-            "مصر",
-            "بحث",
-            "اليوم السابع",
-            " عربية ",
-            "مصر",
-            "بحث",
-            "اليوم السابع",
-            " عربية ",
-            "مصر",
-            "بحث",
-            "اليوم السابع",
-            " عربية ",
-            "مصر",
-            "بحث",
-            "اليوم السابع",
-            " عربية ",
-            "مصر",
-            "بحث",
-            "اليوم السابع",
-          ],
+          src: [" عربية ", "مصر", "بحث", "اليوم السابع"," عربية ", "مصر", "بحث", "اليوم السابع"," عربية ", "مصر", "بحث", "اليوم السابع"," عربية ", "مصر", "بحث", "اليوم السابع"," عربية ", "مصر", "بحث", "اليوم السابع",],
           cache: true,
         },
         resultItem: {

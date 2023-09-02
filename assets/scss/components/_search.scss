@@ -1,10 +1,12 @@
 .autoComplete_wrapper {
   width: 100%;
-  padding: 5px 10px;
+  z-index: 2;
+ 
   @include mq("lg") {
+    padding: 5px 10px;
     position: absolute;
     left: 35%;
-    bottom: 0;
+    bottom: -2px;
     width: 60%;
     transform: translateX(-50%);
     direction: $direction;
@@ -67,7 +69,7 @@
       direction: $direction;
       text-align: $right;
       &:hover {
-        background-color: var(--brightGray);
+        background-color: var(--lightSilver);
       }
       &[aria-selected="true"] {
         background-color: var(--metalSaurus);
