@@ -148,7 +148,7 @@
               <!-- Start Main Logo -->
               <div class="col">
                 <div class="row align-items-center">
-                  <div class="col-auto">
+                  <div class="col">
                     <div class="logo-wrapper">
                       <div class="row align-items-center">
                         <div class="col-auto d-lg-none">
@@ -179,7 +179,7 @@
                         <div class="col-auto px-0">
                           <span style="color: #e7e8ea">|</span>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-auto col-xl">
                           <div class="logo-wrapper-manger ps-2">
                             <h3 class="title">رئيس مجلس الإدارة</h3>
                             <h2 class="name">د/ محمود مسلم</h2>
@@ -188,7 +188,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col text-end d-lg-none">
+                  <div class="col-auto text-end d-lg-none">
                     <a
                       type="button"
                       data-bs-toggle="collapse"
@@ -240,6 +240,21 @@
             <div class="container">
               <!-- <a class="navbar-brand" href="#">Search icon</a> -->
               <div class="main-menu" id="navbarNavDropdown">
+                <!--Button Close Menu Mobile -->
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  id="closeMobileMenu"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+                <!--/Button Close Menu Mobile -->
+
                 <div class="collapse navbar-collapse">
                   <!--Weather for mobile Only-->
                   <div class="text-center d-lg-none">
@@ -254,18 +269,7 @@
                   </div>
                   <hr class="d-lg-none" />
                   <!--Weather for mobile Only-->
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    id="closeMobileMenu"
-                  >
-                    <i class="fas fa-times"></i>
-                  </button>
+
                   <div id="autoComplete-box">
                     <input
                       class="autoComplete"
@@ -425,7 +429,7 @@
       </header>
 
       <!-- Start Main -->
-      <main class="main-content mt-3">
+      <main class="main-content mt-lg-3">
         <!--Main Section Section -->
         <section class="main-section">
           <div class="container">
@@ -962,8 +966,8 @@
                       <h2>إهتماماتي</h2>
                     </div>
                     <div class="flex-grow-0">
-                      <a href="#" class="link-more">
-                        <i class="fa-solid fa-lock"></i>
+                      <a href="#" class="link-more d-flex align-items-center">
+                        <i class="fa-solid fa-lock me-1"></i>
                         <span class="ms-1">تخصيص</span>
                       </a>
                     </div>
@@ -1653,7 +1657,7 @@
         <!-- /opinion book -->
 
         <!-- governorate News -->
-        <section class="governorates-news mt-4">
+        <section class="governorates-news mt-3">
           <div class="container">
             <div class="section-title seaBlue">
               <div class="d-flex">

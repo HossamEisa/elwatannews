@@ -62,16 +62,9 @@
             width: 70px;
 
             @include mq("sm") {
-              width: 160px;
+              width: 100px;
             }
 
-            @include mq("sm") {
-              width: 110px;
-            }
-
-            @include mq("lg") {
-              width: 130px;
-            }
 
             @include mq("xl") {
               width: 140px;
@@ -120,13 +113,13 @@
         .name {
           font-size: calcRem(13);
           color: var(--richBlack);
-          margin-top: 6px;
 
           @include mq("md") {
             font-size: calcRem(17);
           }
 
           @include mq("lg") {
+            margin-top: 6px;
             font-size: calcRem(20);
           }
         }
@@ -207,8 +200,10 @@
 // Menu
 .main-header-menu {
   width: 100%;
-  border-top: 1px solid var(--brightGray);
-  border-bottom: 5px solid var(--main-color);
+  @include mq("lg") {
+    border-top: 1px solid var(--brightGray);
+    border-bottom: 5px solid var(--main-color);
+  }
 
   .navbar {
     padding: 0;
@@ -336,12 +331,12 @@
         position: fixed;
         top: 40px;
         bottom: 0;
-        right: 0;
         overflow-y: auto;
         z-index: 21;
-        #{$left}: -100%;
+        #{$right}: 0;
         transition: 0.6s ease;
         padding: 20px 0;
+        transform: translateX(100%);
         .navbar-nav,
         #autoComplete-box,
         .social-media {
@@ -353,13 +348,6 @@
           }
         }
         .dropdown-menu {
-          background: rgb(116 116 116 / 50%);
-          backdrop-filter: blur(10px);
-          background-image: url(../img/box-bg.png);
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: 85% 0;
-
           .dropdown-item {
             font-size: 16px;
             font-weight: 500;
@@ -394,8 +382,9 @@
       &.show {
         opacity: 1;
         visibility: visible;
+
         .navbar-collapse {
-          #{$left}: 0;
+          transform: translateX(0);
         }
       }
     }

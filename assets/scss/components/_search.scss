@@ -1,7 +1,7 @@
 .autoComplete_wrapper {
   width: 100%;
   z-index: 2;
- 
+
   @include mq("lg") {
     padding: 5px 10px;
     position: absolute;
@@ -68,11 +68,24 @@
     > li {
       direction: $direction;
       text-align: $right;
+      &::before {
+        position: relative;
+        display: inline-block;
+        content: "\f002";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--metalSaurus-85);
+        margin-inline-end: 10px;
+        top: 2px;
+      }
       &:hover {
         background-color: var(--lightSilver);
       }
       &[aria-selected="true"] {
         background-color: var(--metalSaurus);
+        &::before {
+          color: var(--white);
+        }
       }
     }
   }
