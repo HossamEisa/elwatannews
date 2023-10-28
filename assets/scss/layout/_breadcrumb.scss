@@ -1,0 +1,13 @@
+.breadcrumb {
+  a,
+  .breadcrumb-item {
+    color: var(--metalSaurus);
+    font-size: 14px;
+    font-family: $font-b;
+  }
+  .breadcrumb-item {
+    &::before {
+        color: var(--metalSaurus);
+    }
+  }
+}

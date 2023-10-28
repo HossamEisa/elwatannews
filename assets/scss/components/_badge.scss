@@ -5,7 +5,14 @@
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: 0.2rem;
- &.fann {
+  &.fann {
     background-color: #990066;
- }
+  }
+  &-light {
+    background-color: #F0F1F4;
+    font-size: 13px;
+    font-family: $font-b;
+    color: var(--richBlack);
+    padding: 8px 15px;
+  }
 }

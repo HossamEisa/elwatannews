@@ -1,0 +1,8 @@
+hr {
+    border-color: var(--brightGray);
+    opacity: 1;
+    &.gray {
+        border-color: var(--outerSpace);
+    }
+  }
+  

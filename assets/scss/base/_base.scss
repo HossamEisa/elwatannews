@@ -16,6 +16,7 @@
   --cultured: #f7f7f7;
   --brightGray: #e7e8ea;
   --lightSilver: #d4d5d8;
+  --antiFlash: #F0F1F4;
   --metalSaurus: #6e7b83;
   --metalSaurus-30: rgba(110, 123, 131, 0.3);
   --metalSaurus-85: rgba(110, 123, 131, 0.85);
@@ -83,10 +84,6 @@ body {
   }
 }
 
-hr {
-  border-color: var(--brightGray);
-  opacity: 1;
-}
 
 
  .border-row > div {

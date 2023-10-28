@@ -1,7 +1,16 @@
 .header {
   position: relative;
   z-index: 9;
+  @include mq("lg") {
+    border-bottom: 5px solid var(--main-color);
+  }
+  &.fann-section {
+    border-bottom: 2px solid var(--flirt);
 
+    @include mq("lg") {
+      border-bottom: 5px solid var(--flirt);
+    }
+  }
   .container {
     position: relative;
   }
@@ -64,7 +73,6 @@
             @include mq("sm") {
               width: 100px;
             }
-
 
             @include mq("xl") {
               width: 140px;
@@ -202,9 +210,7 @@
   width: 100%;
   @include mq("lg") {
     border-top: 1px solid var(--brightGray);
-    border-bottom: 5px solid var(--main-color);
   }
-
   .navbar {
     padding: 0;
   }

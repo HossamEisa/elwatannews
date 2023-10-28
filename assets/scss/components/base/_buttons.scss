@@ -40,3 +40,17 @@
 //   --bs-btn-border-color: var(--dark-color);
 //   --bs-btn-hover-bg: #212529;
 // }
+
+
+.share-comment {
+  background-color: var(--brightGray);
+  border-radius: 25px;
+  display: block;
+  padding: 10px 25px;
+  font-size: calcRem(15);
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--lightSilver);
+    text-decoration: none;
+  }
+}

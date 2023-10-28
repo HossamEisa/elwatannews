@@ -101,7 +101,52 @@ var latestNewsCarousel = new Swiper(".latest-news-carousel", {
     },
   },
 });
+//sections-most-views
+var mostViewsCarousel = new Swiper(".sections-most-views-wrapper .sections-most-section", {
+  speed: 1400,
+  spaceBetween: 10,
+  slidesPerView: 1.8,
 
+  autoplay: {
+    delay: 5000,
+  },
+  navigation: {
+    nextEl: ".sections-most-views-wrapper .swiper-button-next",
+    prevEl: ".sections-most-views-wrapper .swiper-button-prev",
+  },
+  pagination: {
+    el: ".sections-most-views .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    390: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    480: {
+      slidesPerView: 2.5,
+      slidesPerGroup: 2,
+    },
+    576: {
+      slidesPerView: 2.8,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+    992: {
+      spaceBetween: 20,
+      slidesPerView: 5,
+    },
+    // when window width is >= 640px
+    1200: {
+      spaceBetween: 20,
+      slidesPerView: 6,
+      pagination: false,
+    },
+  },
+});
 var searchClass = document.querySelector(".search");
 searchClass.addEventListener("click", function (e) {
   e.stopPropagation();

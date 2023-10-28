@@ -36,75 +36,78 @@
     }
   }
 
-  .most-read-list {
-    counter-reset: section;
+ 
+}
 
-    &-item {
-      border-bottom: 1px solid var(--brightGray);
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      font-family: $font-l;
-      line-height: 24px;
-      $parent: &;
 
-      &:last-child {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border: none;
+.most-read-list {
+  counter-reset: section;
+
+  &-item {
+    border-bottom: 1px solid var(--brightGray);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-family: $font-l;
+    line-height: 24px;
+    $parent: &;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+    &-content {
+      display: flex;
+      &::before {
+        counter-increment: section;
+        content: counter(section);
+        color: var(--main-color);
+        font-size: calcRem(24);
+        margin-inline-end: 6px;
+        width: 25px;
+        display: inline-block;
       }
-      &-content {
+    }
+    &-image {
+      width: 65px;
+      height: 65px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &.hero {
+      font-size: calcRem(16);
+      font-family: $font-b;
+      .most-read-list-item-content {
         display: flex;
         &::before {
-          counter-increment: section;
-          content: counter(section);
-          color: var(--main-color);
-          font-size: calcRem(24);
-          margin-inline-end: 6px;
-          width: 25px;
-          display: inline-block;
+          font-size: calcRem(35);
         }
       }
-      &-image {
-        width: 65px;
-        height: 65px;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      &.hero {
-        font-size: calcRem(16);
-        font-family: $font-b;
-        .most-read-list-item-content {
-          display: flex;
-          &::before {
-            font-size: calcRem(35);
-          }
-        }
-      }
+    }
 
-      &.down,
-      &.rise {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          top: 27px;
-          #{$right}: -6px;
-        }
+    &.down,
+    &.rise {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 27px;
+        #{$right}: -6px;
       }
-      &.down {
-        &::before {
-          background: url("../images/down.svg") no-repeat;
-        }
+    }
+    &.down {
+      &::before {
+        background: url("../images/down.svg") no-repeat;
       }
-      &.rise {
-        &::before {
-          background: url("../images/up.svg") no-repeat;
-        }
+    }
+    &.rise {
+      &::before {
+        background: url("../images/up.svg") no-repeat;
       }
     }
   }

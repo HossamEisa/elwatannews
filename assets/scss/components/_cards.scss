@@ -75,6 +75,9 @@
     &.two-lines {
       @include ellipse-rows(2);
     }
+    &.three-lines {
+      @include ellipse-rows(3);
+    }
   }
 
   .article-image {
@@ -116,6 +119,7 @@
     line-height: calcRem(33);
     color: var(--raisinBlack);
     margin-bottom: calcRem(22);
+    @include ellipse-rows(4);
   }
   &-text {
     font-size: calcRem(14);
@@ -192,7 +196,7 @@
   > img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
   &::before {
@@ -237,5 +241,89 @@
       @include ellipse-rows(3);
     }
     z-index: 3;
+  }
+}
+
+.rating-card {
+  .card-img {
+    height: 165px;
+    width: 110px;
+    display: block;
+    object-fit: contain;
+  }
+  .card-title {
+    font-family: $font-b;
+    font-size: 16px;
+    line-height: 22px;
+    @include ellipse-rows(2);
+  }
+  .card-text {
+    margin-top: 5px;
+    font-family: $font-l;
+    font-size: 14px;
+    color: var(--outerSpace);
+    line-height: 22px;
+    @include ellipse-rows(3);
+  }
+  .card-rating {
+    display: flex;
+
+    &-val {
+      font-size: 14px;
+      font-family: $font-b;
+      margin-inline-start: 8px;
+    }
+  }
+}
+// Wide Card
+
+.wide-card {
+  .card-title {
+    font-size: calcRem(15);
+    font-family: $font-b;
+    color: var(--richBlack);
+    line-height: calcRem(27);
+    @include mq("md") {
+      @include ellipse-rows(2);
+      font-size: calcRem(18);
+    }
+  }
+  .card-text {
+    @include ellipse-rows(4);
+    font-size: calcRem(14);
+    font-family: $font-l;
+    color: var(--outerSpace);
+    line-height: calcRem(22);
+    margin-top: 8px;
+    display: none;
+    @include mq("md") {
+      display: block;
+    }
+  }
+  .card-img-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: var(--brightGray);
+    width: 100%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.suggest-card {
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: var(--antiFlash);
+  .card-title {
+    font-size: calcRem(15);
+    font-family: $font-b;
+    color: var(--richBlack);
+    line-height: calcRem(27);
+    @include mq("md") {
+      font-size: calcRem(16);
+    }
   }
 }

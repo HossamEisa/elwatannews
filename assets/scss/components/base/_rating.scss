@@ -1,0 +1,22 @@
+.rate-item {
+  color: #a5a5a5;
+  font-size: 14px;
+  &.active {
+    color: var(--flirt);
+  }
+}
+.rate-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .rating-title {
+    font-size: 14px;
+    font-family: $font-b;
+    margin-inline-end: 8px;
+  }
+
+  .rating-val {
+    font-size: 14px;
+    font-family: $font-b;
+    margin-inline-start: 8px;
+  }
+}

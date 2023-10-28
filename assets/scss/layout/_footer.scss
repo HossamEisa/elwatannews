@@ -2,14 +2,14 @@
   background-color: var(--darkCharcoal);
 
   // Main Links
-  &_main {
+  &-main {
     padding: calcRem(18) 0 calcRem(30);
-    &_logo {
+    &-logo {
       padding-top: calcRem(25);
       text-align: center;
     }
 
-    &_links {
+    &-links {
       display: flex;
       flex-wrap: wrap;
       border-bottom: 1px solid var(--graniteGray);
@@ -64,37 +64,53 @@
       }
     }
 
-    &_social {
+    &-social {
       display: flex;
       justify-content: center;
       padding-top: calcRem(15);
       li {
         margin-inline-end: 10px;
+        position: relative;
+
         &:last-child {
           margin-inline-end: 0;
+        }
+        &::after {
+          content: "";
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          position: absolute;
+          width: calcRem(40);
+          height: calcRem(40);
+          border-radius: 6px;
+          background-color: var(--outerSpace);
+          z-index: 0;
         }
       }
       a {
         width: calcRem(40);
         height: calcRem(40);
         border-radius: 6px;
-        background-color: var(--outerSpace);
         display: inline-flex;
         justify-content: center;
         align-items: center;
         color: var(--silverSand);
         text-decoration: none;
         transition: 0.4s ease-in-out;
+        position: relative;
+        z-index: 1;
         &:hover {
           border-radius: 50%;
           color: var(--white);
-          background-color: var(--metalSaurus-85);
+          // background-color: var(--metalSaurus-85);
         }
       }
     }
   }
   // Copyright
-  &_copyright {
+  &-copyright {
     background-color: var(--richBlack);
     color: var(--silverSand);
     font-size: calcRem(14);
