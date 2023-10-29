@@ -22,6 +22,10 @@
   --bs-btn-hover-color: var(--white);
   --bs-btn-active-bg: var(--vividVermilion);
   --bs-btn-active-border-color: var(--vividVermilion);
+
+  --bs-btn-disabled-color: #A1A2A8;
+  --bs-btn-disabled-bg: #E7E8EA;
+  --bs-btn-disabled-border-color: #E7E8EA;
 }
 .btn-outline-primary {
   --bs-btn-color: var(--main-color);

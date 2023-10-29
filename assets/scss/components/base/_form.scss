@@ -1,3 +1,33 @@
 .form-control {
   padding: 0.6rem 0.75rem;
+  font-size: calcRem(14);
+  color: var(--metalSaurus);
+  &:focus {
+    background-color: #E8F0FE;
+    border-color: #7199EB;
+    box-shadow: none;
+  }
+}
+.form-floating {
+  color: var(--metalSaurus);
+
+  label {
+    color: var(--metalSaurus);
+  }
+}
+
+
+
+// PW
+.password-field {
+  position: relative;
+  .pw-click-area {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    cursor: pointer;
+    &:hover {
+      color: #7199EB;
+    }
+  }
 }

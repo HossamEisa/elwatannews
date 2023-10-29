@@ -4,6 +4,12 @@
   line-height: calcRem(48);
   color: var(--richBlack);
 }
+.form-title {
+  font-size: calcRem(32);
+  font-family: $font-b;
+  line-height: calcRem(38);
+  color: var(--richBlack);
+}
 .small-title {
   font-size: calcRem(18);
   font-family: $font-b;

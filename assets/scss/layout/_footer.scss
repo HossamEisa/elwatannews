@@ -71,6 +71,7 @@
       li {
         margin-inline-end: 10px;
         position: relative;
+        transition: 0.4s ease;
 
         &:last-child {
           margin-inline-end: 0;
@@ -87,6 +88,32 @@
           border-radius: 6px;
           background-color: var(--outerSpace);
           z-index: 0;
+          transition: top 0.4s ease;
+        }
+        &::before {
+          content: "•";
+          position: absolute;
+          bottom: 0;
+          color: var(--white);
+          bottom: -4px;
+          color: var(--white);
+          display: inline-block;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: 0.4s ease;
+        }
+        &:hover {
+          &::after {
+            background-color: var(--metalSaurus-85);
+            top: -10px;
+          }
+          &::before {
+            opacity: 1;
+          }
+          a {
+            transform: translateY(-10px);
+          }
         }
       }
       a {
@@ -98,13 +125,12 @@
         align-items: center;
         color: var(--silverSand);
         text-decoration: none;
-        transition: 0.4s ease-in-out;
         position: relative;
         z-index: 1;
+        transition: 0.4s ease-in-out;
+
         &:hover {
-          border-radius: 50%;
           color: var(--white);
-          // background-color: var(--metalSaurus-85);
         }
       }
     }

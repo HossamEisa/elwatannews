@@ -1,0 +1,15 @@
+.parsley-error {
+  border-color: var(--danger);
+  &::placeholder {
+    color: var(--danger);
+  }
+}
+.parsley-required,
+.parsley-equalto {
+  color: var(--danger);
+  font-size: calcRem(12);
+}
+.parsley-errors-list {
+  color: var(--danger);
+  font-size: calcRem(12);
+}
