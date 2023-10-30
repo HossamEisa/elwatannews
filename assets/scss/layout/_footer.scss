@@ -88,49 +88,36 @@
           border-radius: 6px;
           background-color: var(--outerSpace);
           z-index: 0;
-          transition: top 0.4s ease;
+          transition: 0.3s;
         }
-        &::before {
-          content: "•";
-          position: absolute;
-          bottom: 0;
-          color: var(--white);
-          bottom: -4px;
-          color: var(--white);
-          display: inline-block;
-          left: 50%;
-          transform: translateX(-50%);
-          opacity: 0;
-          transition: 0.4s ease;
+        a {
+          width: calcRem(40);
+          height: calcRem(40);
+          border-radius: 6px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--silverSand);
+          text-decoration: none;
+          position: relative;
+          z-index: 1;
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--white);
+          }
         }
+
         &:hover {
           &::after {
             background-color: var(--metalSaurus-85);
-            top: -10px;
-          }
-          &::before {
-            opacity: 1;
+            transform: scale(0.25) translateY(100%);
+            border-radius: 50%;
+            background-color: var(--white);
           }
           a {
-            transform: translateY(-10px);
+            transform: translateY(-40%) scale(1.5);
           }
-        }
-      }
-      a {
-        width: calcRem(40);
-        height: calcRem(40);
-        border-radius: 6px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--silverSand);
-        text-decoration: none;
-        position: relative;
-        z-index: 1;
-        transition: 0.4s ease-in-out;
-
-        &:hover {
-          color: var(--white);
         }
       }
     }
